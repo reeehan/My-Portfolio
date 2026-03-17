@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rehan Tamboli — Cybersecurity Engineer</title>
+    <meta name="description"
+        content="Portfolio of Rehan Tamboli — Cybersecurity Engineer, SOC Analyst, VAPT Specialist, and Secure Software Developer.">
+    <meta name="keywords" content="cybersecurity, SOC analyst, VAPT, penetration testing, portfolio, computer engineer">
+    <meta name="author" content="Rehan Tamboli">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Floating Shapes Canvas -->
+    <canvas id="shapesCanvas"></canvas>
+
+    <!-- Grid Overlay -->
+    <div class="grid-overlay" aria-hidden="true">
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+        <div class="grid-line"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">[</span><span class="logo-text">RT</span><span class="logo-bracket">]</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#introduction" class="nav-link" data-section="introduction">Introduction</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#expertise" class="nav-link" data-section="expertise">Expertise</a></li>
+                <li><a href="#tools" class="nav-link" data-section="tools">Tools</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#architecture" class="nav-link" data-section="architecture">Architecture</a></li>
+                <li><a href="#certifications" class="nav-link" data-section="certifications">Certifications</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+                    <svg class="toggle-icon icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <circle cx="12" cy="12" r="5" />
+                        <line x1="12" y1="1" x2="12" y2="3" />
+                        <line x1="12" y1="21" x2="12" y2="23" />
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                        <line x1="1" y1="12" x2="3" y2="12" />
+                        <line x1="21" y1="12" x2="23" y2="12" />
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                    </svg>
+                    <svg class="toggle-icon icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                    </svg>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ═══════════════════════════
+         HERO — Introduction
+         ═══════════════════════════ -->
+    <section class="hero" id="hero">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <div class="boot-sequence">
+                    <p class="boot-line"><span class="boot-prefix">[BOOT]</span> initializing system...</p>
+                    <p class="boot-line"><span class="boot-prefix">[OK]</span> kernel loaded</p>
+                    <p class="boot-line"><span class="boot-prefix">[OK]</span> security modules active</p>
+                    <p class="boot-line"><span class="boot-prefix">[READY]</span> <span class="typed-text"
+                            id="typedText"></span><span class="cursor">▌</span></p>
+                </div>
+
+                <h1 class="hero-name reveal">
+                    <span class="hero-greeting">Hello, I'm</span>
+                    <span class="hero-title">Rehan Tamboli</span>
+                </h1>
+                <p class="hero-tagline reveal">
+                    Cybersecurity<span class="sep">|</span>Computer Engineer<span class="sep">|</span>SOC<span
+                        class="sep">|</span>VAPT<span class="sep">|</span>Secure Software Development<span
+                        class="sep">|</span>Computer Networking
+                </p>
+                <p class="hero-desc reveal">
+                    Securing digital infrastructure through proactive threat detection, comprehensive vulnerability
+                    assessment,
+                    and the development of resilient, security-first software solutions aligned with modern industry
+                    standards.
+                </p>
+                <div class="hero-cta reveal">
+                    <a href="#projects" class="btn btn-primary magnetic">View Projects</a>
+                    <a href="#contact" class="btn btn-outline magnetic">Get In Touch</a>
+                </div>
+                <div class="hero-social reveal">
+                    <a href="https://github.com/reeehan" target="_blank" class="social-icon float-el"
+                        aria-label="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/reeehan/" target="_blank" class="social-icon float-el"
+                        aria-label="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-photo-wrapper">
+                <div class="photo-frame float-el reveal">
+                    <div class="photo-placeholder" id="profilePhoto">
+                        <img src="" alt="Rehan Tamboli" id="profileImg" style="display:none;">
+                        <div class="photo-fallback">
+                            <span class="photo-initials">RT</span>
+                            <span class="photo-label">Your Photo Here</span>
+                        </div>
+                    </div>
+                    <div class="photo-ring"></div>
+                    <div class="photo-ring ring-2"></div>
+                </div>
+                <div class="hero-stats reveal">
+                    <div class="stat-pill float-el">
+                        <span class="stat-num" data-count="5">0</span><span class="stat-plus">+</span>
+                        <span class="stat-lbl">Projects</span>
+                    </div>
+                    <div class="stat-pill float-el">
+                        <span class="stat-num" data-count="10">0</span><span class="stat-plus">+</span>
+                        <span class="stat-lbl">Certifications</span>
+                    </div>
+                    <div class="stat-pill float-el">
+                        <span class="stat-num" data-count="30">0</span><span class="stat-plus">+</span>
+                        <span class="stat-lbl">Tools</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-cue">
+            <div class="scroll-line"></div>
+            <span>scroll</span>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════
+         SECTION 01 — Introduction
+         ═══════════════════════════ -->
+    <section class="section" id="introduction">
+        <div class="container">
+            <h2 class="section-heading reveal">
+                <span class="section-num">01</span>
+                <span class="section-label">Introduction</span>
+            </h2>
+            <div class="intro-block reveal">
+                <p class="intro-text">
+                    I am a <strong>Computer Engineer</strong> actively building expertise in <strong>cybersecurity
+                        operations</strong>, <strong>secure software development</strong>, and modern security
+                    practices. I am continuously strengthening my understanding of SOC workflows, vulnerability
+                    assessment, and penetration testing while gaining hands-on experience with tools such as
+                    <strong>Splunk</strong>, <strong>Nessus</strong>, and <strong>Kali Linux</strong>.
+                </p>
+                <p class="intro-text">
+                    With a solid foundation in networking, operating systems, web development, and
+                    <strong>Python programming</strong>, I focus on developing security-first projects and automation
+                    scripts that enhance threat detection and improve system resilience. I remain committed to
+                    continuous learning and practical implementation aligned with real-world industry standards.
+                </p>
+                <div class="intro-traits">
+                    <div class="trait float-el">🛡️ Defense-First</div>
+                    <div class="trait float-el">🔍 Detail-Oriented</div>
+                    <div class="trait float-el">⚡ Automation-Driven</div>
+                    <div class="trait float-el">🌐 Network-Aware</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════
+         SECTION 02 — About
+         ═══════════════════════════ -->
+    <section class="section section-alt" id="about">
+        <div class="container">
+            <h2 class="section-heading reveal">
+                <span class="section-num">02</span>
+                <span class="section-label">About</span>
+            </h2>
+            <div class="about-grid">
+                <div class="terminal-card float-el reveal">
+                    <div class="term-bar">
+                        <span class="term-dot"></span><span class="term-dot"></span><span class="term-dot"></span>
+                        <span class="term-title">rehan@kali:~$</span>
+                    </div>
+                    <div class="term-body">
+                        <p><span class="prompt">$</span> whoami</p>
+                        <p class="output">Rehan Tamboli</p><br>
+                        <p><span class="prompt">$</span> cat /etc/profile</p>
+                        <p class="output">
+                            ROLE&nbsp;&nbsp; = Security-Focused Computer Engineer<br>
+                            FOCUS&nbsp; = SOC Operations | Vulnerability Assessment | Secure Development<br>
+                            OS&nbsp;&nbsp;&nbsp;&nbsp; = Kali Linux | Windows<br>
+                            STATUS = Actively seeking cybersecurity opportunities
+                        </p><br>
+                        <p><span class="prompt">$</span> cat interests.conf</p>
+                        <p class="output">
+                            ▸ Threat Hunting & Incident Response<br>
+                            ▸ Network Security & Architecture<br>
+                            ▸ Vulnerability Assessment & Penetration Testing<br>
+                            ▸ Secure Software Development (SSDLC)<br>
+                            ▸ Security Automation with Python
+                        </p><br>
+                        <p><span class="prompt">$</span> <span class="cursor-blink">▌</span></p>
+                    </div>
+                </div>
+                <div class="about-text reveal">
+                    <p>I combine strong computer networking fundamentals with software development expertise to deliver
+                        well-rounded, security-focused solutions.</p>
+                    <p>I maintain a proactive security mindset — identifying and mitigating vulnerabilities before they
+                        can be exploited. Through ethical hacking practices and structured vulnerability analysis, I aim
+                        to strengthen systems before adversaries have the opportunity to target them.</p>
+                    <p>Whether configuring SIEM dashboards, conducting penetration testing, or developing Python
+                        automation scripts to enhance threat detection, I approach every project with analytical
+                        precision, structured execution, and a commitment to continuous improvement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════
+         SECTION 03 — Expertise
+         ═══════════════════════════ -->
+    <section class="section" id="expertise">
+        <div class="container">
+            <h2 class="section-heading reveal">
+                <span class="section-num">03</span>
+                <span class="section-label">Expertise</span>
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-card tilt-card float-el reveal">
+                    <div class="skill-inner">
+                        <div class="skill-icon-wrap"><span>🔐</span></div>
+                        <h3>Security</h3>
+                        <div class="skill-bars">
+                            <div class="sbar"><span class="sbar-name">SIEM — Splunk</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div class="sbar"><span class="sbar-name">Nessus / OpenVAS</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill" data-width="80"></div>
+                                </div>
+                            </div>
+                            <div class="sbar"><span class="sbar-name">Nmap Scanning</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill" data-width="90"></div>
+                                </div>
+                            </div>
+                            <div class="sbar"><span class="sbar-name">Log Analysis</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div class="sbar"><span class="sbar-name">Incident Response</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill" data-width="75"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card tilt-card float-el reveal">
+                    <div class="skill-inner">
+                        <div class="skill-icon-wrap"><span>🌐</span></div>
+                        <h3>Networking</h3>
+                        <div class="skill-bars">
+                            <div class="sbar"><span class="sbar-name">TCP/IP, DNS, DHCP</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill" data-width="90"></div>
+                                </div>
+                            </div>
+                            <div class="sbar"><span class="sbar-name">Subnetting</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div class="sbar"><span class="sbar-name">VLANs</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill" data-width="80"></div>
+                                </div>
+                            </div>
+                            <div class="sbar"><span class="sbar-name">CCNA Concepts</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill" data-width="75"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card tilt-card float-el reveal">
+                    <div class="skill-inner">
+                        <div class="skill-icon-wrap"><span>💻</span></div>
+                        <h3>Programming</h3>
+                        <div class="skill-bars">
+                            <div class="sbar"><span class="sbar-name">Python</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div class="sbar"><span class="sbar-name">Bash Scripting</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill" data-width="80"></div>
+                                </div>
+                            </div>
+                            <div class="sbar"><span class="sbar-name">HTML, CSS, JS</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill" data-width="80"></div>
+                                </div>
+                            </div>
+                            <div class="sbar"><span class="sbar-name">PHP + MySQL</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill" data-width="70"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card tilt-card float-el reveal">
+                    <div class="skill-inner">
+                        <div class="skill-icon-wrap"><span>☁️</span></div>
+                        <h3>Cloud / DevOps</h3>
+                        <div class="skill-bars">
+                            <div class="sbar"><span class="sbar-name">Git & GitHub</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div class="sbar"><span class="sbar-name">Linux Administration</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill" data-width="85"></div>
+                                </div>
+                            </div>
+                            <div class="sbar"><span class="sbar-name">Docker Basics</span>
+                                <div class="sbar-track">
+                                    <div class="sbar-fill" data-width="65"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════
+         SECTION 04 — Tools & Technologies
+         ═══════════════════════════ -->
+    <section class="section section-alt" id="tools">
+        <div class="container">
+            <h2 class="section-heading reveal">
+                <span class="section-num">04</span>
+                <span class="section-label">Tools & Technologies</span>
+            </h2>
+            <div class="tools-showcase reveal">
+                <div class="tools-category">
+                    <h3 class="tools-cat-title">🛡️ Security Tools</h3>
+                    <div class="tools-row">
+                        <div class="tool-chip float-el">Splunk SIEM</div>
+                        <div class="tool-chip float-el">Nessus</div>
+                        <div class="tool-chip float-el">OpenVAS</div>
+                        <div class="tool-chip float-el">Nmap</div>
+                        <div class="tool-chip float-el">Wireshark</div>
+                        <div class="tool-chip float-el">Burp Suite</div>
+                        <div class="tool-chip float-el">Metasploit</div>
+                        <div class="tool-chip float-el">tcpdump</div>
+                        <div class="tool-chip float-el">Hashcat</div>
+                    </div>
+                </div>
+                <div class="tools-category">
+                    <h3 class="tools-cat-title">💻 Development</h3>
+                    <div class="tools-row">
+                        <div class="tool-chip float-el">Python</div>
+                        <div class="tool-chip float-el">Bash</div>
+                        <div class="tool-chip float-el">HTML / CSS / JS</div>
+                        <div class="tool-chip float-el">PHP</div>
+                        <div class="tool-chip float-el">MySQL</div>
+                        <div class="tool-chip float-el">Flask</div>
+                        <div class="tool-chip float-el">Git & GitHub</div>
+                    </div>
+                </div>
+                <div class="tools-category">
+                    <h3 class="tools-cat-title">🌐 Networking & OS</h3>
+                    <div class="tools-row">
+                        <div class="tool-chip float-el">Kali Linux</div>
+                        <div class="tool-chip float-el">Ubuntu</div>
+                        <div class="tool-chip float-el">Windows Server</div>
+                        <div class="tool-chip float-el">Cisco IOS</div>
+                        <div class="tool-chip float-el">VirtualBox</div>
+                        <div class="tool-chip float-el">Docker</div>
+                        <div class="tool-chip float-el">VS Code</div>
+                    </div>
+                </div>
+                <div class="tools-category">
+                    <h3 class="tools-cat-title">📊 Monitoring & Analysis</h3>
+                    <div class="tools-row">
+                        <div class="tool-chip float-el">Splunk SPL</div>
+                        <div class="tool-chip float-el">ELK Stack</div>
+                        <div class="tool-chip float-el">Snort</div>
+                        <div class="tool-chip float-el">OSSEC</div>
+                        <div class="tool-chip float-el">pfSense</div>
+                        <div class="tool-chip float-el">Suricata</div>
+                    </div>
+                </div>
+                <div class="tools-category reveal">
+                    <h3 class="tools-cat-title">🤖 AI & Productivity</h3>
+                    <div class="tools-row">
+                        <div class="tool-chip float-el">ChatGPT</div>
+                        <div class="tool-chip float-el">Claude</div>
+                        <div class="tool-chip float-el">Gemini</div>
+                        <div class="tool-chip float-el">GitHub Copilot</div>
+                        <div class="tool-chip float-el">Cursor</div>
+                        <div class="tool-chip float-el">AI-Driven Threat Analysis</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════
+         SECTION 05 — Projects
+         ═══════════════════════════ -->
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-heading reveal">
+                <span class="section-num">05</span>
+                <span class="section-label">Projects</span>
+            </h2>
+            <div class="projects-grid">
+                <div class="project-card tilt-card float-el reveal">
+                    <div class="project-inner">
+                        <span class="proj-badge badge-green">Security Operations</span>
+                        <h3>SOC Log Analyzer</h3>
+                        <p>Python-based tool for detecting brute-force attacks and suspicious IP activities in server
+                            logs with a premium web dashboard.</p>
+                        <div class="proj-tags"><span>Python</span><span>Flask</span><span>Threat Detection</span></div>
+                        <a href="#" class="proj-cta">View Case Study <span>→</span></a>
+                    </div>
+                </div>
+                <div class="project-card tilt-card float-el reveal">
+                    <div class="project-inner">
+                        <span class="proj-badge badge-orange">Network Testing</span>
+                        <h3>VAPT Lab Simulation</h3>
+                        <p>Simulated penetration tests using Kali Linux, Nmap, and Metasploitable VM for comprehensive
+                            vulnerability assessment.</p>
+                        <div class="proj-tags"><span>Kali Linux</span><span>Nmap</span><span>Exploitation</span></div>
+                        <a href="#" class="proj-cta">Explore Case <span>→</span></a>
+                    </div>
+                </div>
+                <div class="project-card tilt-card float-el reveal">
+                    <div class="project-inner">
+                        <span class="proj-badge badge-purple">Web Application Security</span>
+                        <h3>Secure Login System</h3>
+                        <p>Login authentication with SQL injection prevention, CSRF protection, and bcrypt hashed
+                            passwords.</p>
+                        <div class="proj-tags"><span>PHP & MySQL</span><span>OWASP</span><span>Encryption</span></div>
+                        <a href="#" class="proj-cta">Read More <span>→</span></a>
+                    </div>
+                </div>
+                <div class="project-card tilt-card float-el reveal">
+                    <div class="project-inner">
+                        <span class="proj-badge badge-teal">SIEM & Monitoring</span>
+                        <h3>Splunk Dashboard</h3>
+                        <p>Custom Splunk dashboards with automated alerting for real-time monitoring of failed logins,
+                            privilege escalation, and threats.</p>
+                        <div class="proj-tags"><span>Splunk</span><span>SPL</span><span>Alerts</span></div>
+                        <a href="#" class="proj-cta">View Case Study <span>→</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════
+         SECTION 06 — Architecture & Approach
+         ═══════════════════════════ -->
+    <section class="section section-alt" id="architecture">
+        <div class="container">
+            <h2 class="section-heading reveal">
+                <span class="section-num">06</span>
+                <span class="section-label">Architecture & Approach</span>
+            </h2>
+            <div class="timeline">
+                <div class="tl-item reveal">
+                    <div class="tl-dot"></div>
+                    <div class="tl-content float-el">
+                        <span class="tl-date">2024 — Present</span>
+                        <h3>Cybersecurity Researcher</h3>
+                        <p>Performing vulnerability assessments, building SOC tools, contributing to open-source
+                            security projects. Practicing on TryHackMe and Hack The Box.</p>
+                        <div class="tl-tags"><span>VAPT</span><span>SOC</span><span>Ethical Hacking</span></div>
+                    </div>
+                </div>
+                <div class="tl-item reveal">
+                    <div class="tl-dot"></div>
+                    <div class="tl-content float-el">
+                        <span class="tl-date">2022 — 2026</span>
+                        <h3>B.E. Computer Engineering</h3>
+                        <p>Sir Visvesvaraya Institute of Technology, Nashik. Focused on cybersecurity, networking, and
+                            software development.</p>
+                        <div class="tl-tags"><span>Computer Engineering</span><span>CCNA</span><span>CEH</span></div>
+                    </div>
+                </div>
+                <div class="tl-item reveal">
+                    <div class="tl-dot"></div>
+                    <div class="tl-content float-el">
+                        <span class="tl-date">2023</span>
+                        <h3>CCNA Training</h3>
+                        <p>Comprehensive Cisco networking: routing, switching, subnetting, VLANs, and network security
+                            fundamentals.</p>
+                        <div class="tl-tags"><span>Networking</span><span>Cisco</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════
+         SECTION 07 — Certifications & Continuous Learning
+         ═══════════════════════════ -->
+    <section class="section" id="certifications">
+        <div class="container">
+            <h2 class="section-heading reveal">
+                <span class="section-num">07</span>
+                <span class="section-label">Certifications & Continuous Learning</span>
+            </h2>
+            <div class="certs-grid">
+                <div class="cert-card float-el reveal">
+                    <div class="cert-icon">🏅</div>
+                    <h3>CCNA Training</h3>
+                    <p>Cisco Networking Fundamentals</p>
+                </div>
+                <div class="cert-card float-el reveal">
+                    <div class="cert-icon">🏅</div>
+                    <h3>CEH (Studying)</h3>
+                    <p>Certified Ethical Hacker v13</p>
+                </div>
+                <div class="cert-card float-el reveal">
+                    <div class="cert-icon">🏅</div>
+                    <h3>Cybersecurity Essentials</h3>
+                    <p>Online Certification</p>
+                </div>
+                <div class="cert-card float-el reveal">
+                    <div class="cert-icon">🏅</div>
+                    <h3>Intro to Ethical Hacking</h3>
+                    <p>Platform Certificate</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════
+         SECTION 08 — Contact
+         ═══════════════════════════ -->
+    <section class="section section-alt" id="contact">
+        <div class="container">
+            <h2 class="section-heading reveal">
+                <span class="section-num">08</span>
+                <span class="section-label">Contact</span>
+            </h2>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <p class="contact-intro">Want to work together or discuss cybersecurity? Open a channel.</p>
+                    <div class="contact-links">
+                        <a href="mailto:reeehant@gmail.com" class="contact-link float-el">
+                            <span class="cl-icon">📧</span>
+                            <div>
+                                <span class="cl-label">Email</span><span class="cl-value">reeehant@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/reeehan" target="_blank" class="contact-link float-el">
+                            <span class="cl-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                                </svg></span>
+                            <div><span class="cl-label">GitHub</span><span
+                                    class="cl-value">https://github.com/reeehan</span></div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/reeehan/" target="_blank" class="contact-link float-el">
+                            <span class="cl-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                                </svg></span>
+                            <div><span class="cl-label">LinkedIn</span><span
+                                    class="cl-value">https://www.linkedin.com/in/reeehan/</span></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-card float-el reveal">
+                    <form class="contact-form" id="contactForm">
+                        <div class="fg">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="fg">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="fg">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Tell me about your project..." rows="5"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block magnetic">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="logo-bracket">[</span><span class="logo-text">Rehan Tamboli</span><span
+                    class="logo-bracket">]</span>
+            </div>
+            <p class="footer-line">Securing the digital frontier, one vulnerability at a time.</p>
+            <div class="footer-social">
+                <a href="https://github.com/reeehan" target="_blank" aria-label="GitHub"><svg width="18" height="18"
+                        viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg></a>
+                <a href="https://www.linkedin.com/in/reeehan/" target="_blank" aria-label="LinkedIn"><svg width="18"
+                        height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg></a>
+            </div>
+            <p class="footer-copy">© 2026 Rehan Tamboli. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
